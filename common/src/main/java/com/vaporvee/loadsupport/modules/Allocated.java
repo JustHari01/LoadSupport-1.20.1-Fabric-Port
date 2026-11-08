@@ -50,12 +50,13 @@ public class Allocated {
         return input == null ? "" : input.replaceAll("<[^>]*>", "");
     }
 
-    private static JFrame errorWindow;
+    private static volatile JFrame errorWindow;
 
     public static boolean enoughMemory = true;
 
     public static boolean isWindowOpen(){
-        return errorWindow.isDisplayable();
+        JFrame window = errorWindow;
+        return window == null || window.isDisplayable();
     }
 
     private static void createMemoryError() {

@@ -15,9 +15,9 @@ out
 !.idea/scopes
 
 # gradle
-build
-.gradle
-gradle
+build/
+.gradle/
+artwork/*-Icon-AI.png
 
 # other
 eclipse

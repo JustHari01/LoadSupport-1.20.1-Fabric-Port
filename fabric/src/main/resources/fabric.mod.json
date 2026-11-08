@@ -1,36 +1,30 @@
 {
-    "schemaVersion": 1,
-    "id": "${mod_id}",
-    "version": "${version}",
-    "name": "${mod_name}",
-    "description": "${description}",
-    "authors": [
-        "${mod_author}"
-    ],
-    "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
-    },
-    "license": "${license}",
-    "icon": "assets/${mod_id}/icon.png",
-    "environment": "*",
-    "entrypoints": {
-        "main": [
-          "com.vaporvee.loadsupport.LoadSupport"
-        ]
-    },
-    "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
-    ],
-    "depends": {
-        "fabricloader": ">=${fabric_loader_version}",
-        "fabric-api": "*",
-        "minecraft": "~${minecraft_version}",
-        "java": ">=${java_version}"
-    },
-    "suggests": {
-        "another-mod": "*"
-    }
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+  "name": "${mod_name}",
+  "description": "${description}",
+  "authors": ["vaporvee", "JustHari01"],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/loadsupport",
+    "sources": "https://github.com/JustHari01/LoadSupport-1.20.1-Fabric-Port",
+    "issues": "https://github.com/JustHari01/LoadSupport-1.20.1-Fabric-Port/issues"
+  },
+  "license": "${license}",
+  "icon": "assets/${mod_id}/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": ["com.vaporvee.loadsupport.LoadSupport"]
+  },
+  "mixins": [
+    "${mod_id}.mixins.json",
+    "${mod_id}.fabric.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": ">=0.92.12",
+    "cloth-config": ">=11.1.136",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=${java_version}"
+  }
 }
-  
